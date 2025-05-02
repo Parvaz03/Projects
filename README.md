@@ -2,16 +2,15 @@
 🔧 Requirements
 1. Python Libraries
 Install these using PyCharm terminal or pip:
-
-bash
-Copy
-Edit
 pip install SpeechRecognition pyttsx3 pymongo pyaudio datetime apscheduler
+
 If pyaudio fails to install, try:
+
 On Windows: download .whl from https://www.lfd.uci.edu/~gohlke/pythonlibs/#pyaudio
+
 On Mac: brew install portaudio then pip install pyaudio
 
-2. MongoDB Setup
+3. MongoDB Setup
 Install MongoDB (Community Edition): https://www.mongodb.com/try/download/community
 
 Start MongoDB server (default runs at mongodb://localhost:27017)

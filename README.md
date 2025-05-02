@@ -1,54 +1,60 @@
-# Project
-🔧 Requirements
-1. Python Libraries
-Install these using PyCharm terminal or pip:
-pip install SpeechRecognition pyttsx3 pymongo pyaudio datetime apscheduler
+# 🗣️ Voice Notes & Memo System with MongoDB and Calendar Reminders
 
-If pyaudio fails to install, try:
+A Python-based voice assistant app to record notes and set calendar reminders using speech. Notes are stored in MongoDB and reminders are announced at scheduled times.
 
-On Windows: download .whl from https://www.lfd.uci.edu/~gohlke/pythonlibs/#pyaudio
+---
 
-On Mac: brew install portaudio then pip install pyaudio
+## 🎯 Features
 
-3. MongoDB Setup
-Install MongoDB (Community Edition): https://www.mongodb.com/try/download/community
+- 🎤 Voice-based note creation
+- 🕓 Optional voice-set reminders
+- 🧠 Stores notes in MongoDB
+- 🔔 Auto-alerts when reminders are due
+- 🗂️ Modular code (voice, DB, main loop)
+- 🛠️ Background job scheduler
 
-Start MongoDB server (default runs at mongodb://localhost:27017)
+---
 
-Create a database: voice_notes, collection: notes
-
-📁 Project Structure
-css
-Copy
-Edit
+## 📁 Project Structure
 voice_notes_project/
-├── main.py
+├── main.py # App entry point
 └── utils/
-    └── voice.py
-    └── db.py
-🧠 Code
-utils/voice.py – Voice Input/Output
-python
+├── voice.py # Voice input/output
+└── db.py # MongoDB operations
 
-main.py – Main App
-python
+## 📁Install Requirements
+-pip install -r requirements.txt
+-pip install SpeechRecognition pyttsx3 pymongo pyaudio apscheduler
 
-🛠️ Setup in PyCharm
-Open PyCharm → Create New Project
+## 📁 Set Up MongoDB
+1.Install MongoDB from https://www.mongodb.com/try/download/community
+2.Start the service:
 
-Ensure interpreter uses Python 3.8+
+bash
+mongod
 
-Install all dependencies (in terminal or via PyCharm GUI)
+## 📁Run the Application
+python main.py
+-Say:
+1."create note" — to start a new voice memo
+2."exit" — to quit the app
 
-Create project files as shown above
+## 📚 Example Commands
+🗣️: create note  
+🗣️: Shopping List  
+🗣️: Milk, Bread, Eggs  
+🗣️: 2025-05-01 14:30
 
-Run main.py
+## ✅ Dependencies
+1.SpeechRecognition
+2.pyttsx3
+3.pymongo
+4.apscheduler
+5.pyaudio
 
-⏰ Features
-Voice command for creating notes
+## 🛡 License
+This project is licensed under the MIT License.
 
-Optional voice-input reminder time
 
-Stores notes in MongoDB
 
-Uses background scheduler to check and read reminders every minute
+
